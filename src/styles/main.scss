@@ -1,0 +1,86 @@
+@use 'hero';
+@use 'variaveis';
+
+
+@font-face {
+    font-family: Croassaint;
+    src: url(../../assets/fonts/CroissantOne-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Parisienne;
+    src: url(../../assets/fonts/Parisienne-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Windsor;
+    src: url(../../assets/fonts/WindsorProRg.TTF);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Windsor;
+    src: url(../../assets/fonts/WindsorProBold.TTF);
+    font-weight: 700;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Windsor, sans-serif;
+}
+
+body {
+
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin text($fontsize: 18px) {
+
+    font-size: $fontsize;
+    line-height: $fontsize + 8px;
+    color: variaveis.$corTextoPrincipal
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario;
+}
+
+.text {
+
+    @include text;
+
+}
+
+.text--small {
+
+    @include text(12px);
+}
+
+.text--big {
+
+    @include text(18px);
+}
+
+.title--big {
+    @include title(44px);
+
+
+}
+
+.title {
+    @include title;
+
+
+}
+
+.title--small {
+    @include title(28px);
+
+
+}
