@@ -4,9 +4,6 @@
     text-align: center;
     display: flex;
 
-
-
-
     &__content {
         display: flex;
         max-width: 800px;
@@ -16,12 +13,10 @@
             padding-top: 80px;
 
             .title--small {
-
                 padding-bottom: 20px;
             }
 
             .text {
-
                 font-family: Croassaint, sans-serif;
             }
 
@@ -37,11 +32,17 @@
                     margin-right: 18px;
                     font-size: 18px;
                     font-weight: 700;
+
+                    border-right: 1px solid black;
+                    padding-right: 12px;
+
+                    &:last-child {
+
+                        border-right: none;
+                    }
                 }
             }
-
         }
-
     }
 
     &__image {
