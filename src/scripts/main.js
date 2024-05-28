@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.list__item__img').hover(
+    $('.cast__img').hover(
         function () {
             // Ao passar o mouse, muda a imagem para o src definido no data-hover
             $(this).data('original-src', $(this).attr('src'));
