@@ -1,8 +1,11 @@
+@use 'variaveis';
+
 .hero {
     padding: 5.6vw;
     min-height: 80vh;
     text-align: center;
     display: flex;
+    background-color: variaveis.$corDeFundo;
 
     &__content {
         display: flex;
@@ -14,10 +17,12 @@
 
             .title--small {
                 padding-bottom: 20px;
+                text-shadow: 1px 1px 5px variaveis.$corVermelidao;
             }
 
             .text {
                 font-family: Croassaint, sans-serif;
+                text-shadow: 1px 1px 1px variaveis.$corVermelidao;
             }
 
             &__list {

@@ -1,0 +1,68 @@
+@use 'variaveis';
+
+.cast {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-color: variaveis.$corDeFundoSecundario;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+
+
+
+    &__content {
+
+        max-width: 900px;
+
+        h2 {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        &__actors {
+
+            &__list {
+                display: flex;
+                padding: 0;
+                margin: 0;
+
+                &__item {
+                    padding: 16px;
+
+
+                    .title--small {
+                        margin-top: 8px;
+                        font-size: 20px;
+
+                    }
+
+                    img {
+
+                        width: 200px;
+                        height: 280px;
+                        border-radius: 7px;
+                        -webkit-filter: grayscale(1);
+                        transition: transform 0.3s ease, filter 0.3 ease, box-shadow 0.3 ease;
+                        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+                        &:hover {
+
+                            -webkit-filter: grayscale(0);
+                            cursor: pointer;
+                            transform: scale(1.1);
+                            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                        }
+                    }
+
+                    &__text {
+
+                        &--is-inactive {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

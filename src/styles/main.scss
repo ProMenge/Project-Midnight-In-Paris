@@ -1,5 +1,5 @@
 @use 'hero';
-@use 'actors';
+@use 'cast';
 @use 'variaveis';
 
 
@@ -33,11 +33,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Windsor, sans-serif;
+    list-style: none;
 }
 
-body {
-    background-color: variaveis.$corDeFundo;
-}
+body {}
 
 @mixin text($fontsize: 18px) {
 
@@ -49,6 +48,7 @@ body {
 @mixin title($fontSize: 40px) {
     @include text($fontSize);
     color: variaveis.$corTextoSecundario;
+    font-weight: 700;
 }
 
 .text {
