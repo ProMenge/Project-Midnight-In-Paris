@@ -10,4 +10,22 @@ $(document).ready(function () {
             $(this).attr('src', $(this).data('original-src'));
         }
     );
+
+    $('.cast__img').on('click', function () {
+        // Esconde todas as descrições
+        $('.cast__description__item').hide();
+
+        // Remove a classe de destaque de todas as imagens
+        $('.cast__img').removeClass('cast__img--active');
+        $('.cast__item').removeClass('cast__item--active');
+
+        // Mostra a descrição correspondente
+        var descriptionId = $(this).data('description');
+        $('#' + descriptionId).show();
+
+        // Adiciona a classe de destaque à imagem clicada
+        $(this).addClass('cast__img--active');
+        $(this).parent('.cast__item').addClass('cast__item--active');
+    });
+    $('.cast__img').first().click();
 });
