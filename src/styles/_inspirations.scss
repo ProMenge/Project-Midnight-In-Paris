@@ -1,0 +1,52 @@
+@use 'variaveis';
+
+.inspirations {
+    padding: 5.6vw;
+    background-color: variaveis.$corDeFundo;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__content {
+
+        min-width: 80vw;
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+
+        &__button {
+            color: variaveis.$corTextoSecundario;
+            font-size: 20px;
+            border: none;
+            padding-bottom: 5px;
+            background: none;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            cursor: pointer;
+            border-bottom: 5px solid transparent;
+            transition: transform 0.5s ease;
+            margin: 0 15px;
+
+
+            &:hover {
+
+                transform: scale(1.1);
+                color: variaveis.$corTextoPrincipal ;
+            }
+
+            &--is-active {
+                border-color: variaveis.$corTextoSecundario;
+                transform: scale(1.1);
+                color: variaveis.$corTextoPrincipal ;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    const $buttons = $('[data-tab-button]');
+
     $('.cast__img').hover(
         function () {
             // Ao passar o mouse, muda a imagem para o src definido no data-hover
@@ -30,4 +33,26 @@ $(document).ready(function () {
         $(this).siblings('.cast__name').addClass('cast__name--is-active');
     });
     $('.cast__img').first().click();
+
+
+
+    $buttons.on('click', function () {
+        const abaAlvo = $(this).data('tab-button');
+        const $aba = $(`[data-tab-id=${abaAlvo}]`);
+
+        escondeTodasAbas();
+        $aba.addClass('inspirations__list--is-active');
+
+        removeBotaoAtivo();
+        $(this).addClass('inspirations__tabs__button--is-active');
+    });
+
+    function removeBotaoAtivo() {
+        $buttons.removeClass('inspirations__tabs__button--is-active');
+    }
+
+    function escondeTodasAbas() {
+        $('[data-tab-id]').removeClass('inspirations__list--is-active');
+    }
 });
+
