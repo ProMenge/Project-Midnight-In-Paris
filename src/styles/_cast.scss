@@ -37,16 +37,21 @@
     &__item {
         margin: 12px;
 
-        &--active {}
-
-        .title--small {
-            margin-top: 20px;
-            font-size: 20px;
-        }
+        font-size: 20px;
     }
+
 
     &__name {
         color: #f4c430 !important;
+        margin-top: 20px;
+
+        &--is-active {
+
+            font-size: 28px !important;
+            margin-top: 26px;
+            font-family: Croassaint;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+        }
     }
 
     &__img {
@@ -80,7 +85,13 @@
             background-color: variaveis.$corDeFundo;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+            .text {
+
+                font-family: Croassaint;
+                font-size: 16px;
+            }
 
             .title--small {
 
@@ -88,5 +99,6 @@
             }
         }
     }
+
 
 }
