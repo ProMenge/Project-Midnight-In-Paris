@@ -41,7 +41,7 @@ $(document).ready(function () {
         const $aba = $(`[data-tab-id=${abaAlvo}]`);
 
         escondeTodasAbas();
-        $aba.addClass('inspirations__list--is-active');
+        $aba.addClass('inspirations__panel--is-active');
 
         removeBotaoAtivo();
         $(this).addClass('inspirations__tabs__button--is-active');
@@ -52,7 +52,7 @@ $(document).ready(function () {
     }
 
     function escondeTodasAbas() {
-        $('[data-tab-id]').removeClass('inspirations__list--is-active');
+        $('[data-tab-id]').removeClass('inspirations__panel--is-active');
     }
 });
 
