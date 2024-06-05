@@ -44,7 +44,8 @@ body {}
 
     font-size: $fontsize;
     line-height: $fontsize + 8px;
-    color: variaveis.$corTextoPrincipal
+    color: variaveis.$corTextoPrincipal;
+    text-shadow: 1px 1px 1px variaveis.$corVermelidao;
 }
 
 @mixin title($fontSize: 40px) {

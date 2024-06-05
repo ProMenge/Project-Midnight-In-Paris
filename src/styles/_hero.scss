@@ -17,12 +17,10 @@
 
             .title--small {
                 padding-bottom: 20px;
-                text-shadow: 1px 1px 5px variaveis.$corVermelidao;
             }
 
             .text {
                 font-family: Croassaint, sans-serif;
-                text-shadow: 1px 1px 1px variaveis.$corVermelidao;
             }
 
             &__list {
@@ -31,7 +29,6 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-
 
                 &__item {
                     margin-right: 18px;
