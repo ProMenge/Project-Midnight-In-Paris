@@ -1,0 +1,35 @@
+@use 'variaveis';
+
+.footer {
+    padding: 1vw;
+    background-color: variaveis.$corDeFundoSecundario;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    &__infos {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        &__item {
+            margin: 0 5px;
+        }
+
+    }
+
+    &__git {
+
+        width: 50px;
+
+        &:hover {
+
+            cursor: pointer;
+            transform: scale(1.1);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            transition: transform 0.6s ease;
+        }
+    }
+}
