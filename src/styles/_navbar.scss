@@ -1,7 +1,6 @@
 @use 'variaveis';
 
 .header {
-
     position: sticky;
     top: 0;
     left: 0;
@@ -12,10 +11,13 @@
     &__title {
 
         transition: display 0.4s ease;
+
+        @media(max-width:768px) {
+            display: none;
+        }
     }
 
     &--is-hidden {
-
         background-color: transparent;
 
         .header {
@@ -29,6 +31,10 @@
             &__logo {
                 max-width: 130px;
                 transition: 0.3s ease;
+
+                @media(max-width:768px) {
+                    display: none;
+                }
             }
 
 
@@ -40,6 +46,9 @@
                     .text--big {
                         font-family: Croassaint, sans-serif;
 
+                        @media(max-width:768px) {
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -52,6 +61,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media(max-width:768px) {
+            padding: 2px 16px;
+        }
 
 
     }

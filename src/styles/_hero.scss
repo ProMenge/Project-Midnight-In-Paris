@@ -7,6 +7,18 @@
     display: flex;
     background-color: variaveis.$corDeFundo;
 
+    @media (max-width: 768px) {
+        background-image: url(../images/hero_celular.jpeg);
+        padding-top: calc(50vw + 25px);
+        background-size: contain;
+        flex-wrap: wrap;
+        margin-top: -55px;
+        padding: 2vw;
+        justify-content: center;
+        align-items: center;
+
+    }
+
     &__content {
         display: flex;
         max-width: 1200px;
@@ -51,6 +63,12 @@
 
         max-width: 400px;
         margin-left: 40px;
+
+        @media (max-width: 768px) {
+
+            margin: 0;
+        }
+
     }
 
 
