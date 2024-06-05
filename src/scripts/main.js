@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
     const $buttons = $('[data-tab-button]');
+    const alturaHeaderSection = $(".header").outerHeight();
+
 
     $('.cast__img').hover(
         function () {
@@ -34,8 +36,6 @@ $(document).ready(function () {
     });
     $('.cast__img').first().click();
 
-
-
     $buttons.on('click', function () {
         const abaAlvo = $(this).data('tab-button');
         const $aba = $(`[data-tab-id=${abaAlvo}]`);
@@ -54,5 +54,25 @@ $(document).ready(function () {
     function escondeTodasAbas() {
         $('[data-tab-id]').removeClass('inspirations__panel--is-active');
     }
+
+
+
+    function ocultaElementosDoHeader() {
+        $('.header').addClass('header--is-hidden');
+    }
+
+    function exibeElementosDoHeader() {
+        $('.header').removeClass('header--is-hidden');
+    }
+
+    $(window).scroll(function () {
+        const posicaoAtual = $(window).scrollTop();
+
+        if (posicaoAtual > alturaHeaderSection) {
+            ocultaElementosDoHeader();
+        } else {
+            exibeElementosDoHeader();
+        }
+    });
 });
 

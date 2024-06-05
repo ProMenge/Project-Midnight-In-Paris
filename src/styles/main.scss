@@ -3,6 +3,7 @@
 @use 'cast';
 @use 'variaveis';
 @use 'footer';
+@use 'navbar';
 
 
 @font-face {
@@ -67,7 +68,7 @@ body {}
 
 .text--big {
 
-    @include text(18px);
+    @include text(22px);
 }
 
 .title--big {
