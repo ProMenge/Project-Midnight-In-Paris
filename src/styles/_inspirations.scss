@@ -65,9 +65,6 @@
 
             display: block;
         }
-    }
-
-    &__panel {
 
         h3 {
 
@@ -79,13 +76,10 @@
             padding: 20px;
             text-align: left;
             text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+            font-family: Croassaint, sans-serif;
 
         }
 
-        img {
-
-            width: 100%;
-        }
 
         &__content {
 
@@ -93,21 +87,38 @@
             flex-wrap: wrap;
         }
 
-        &__literary {
+    }
 
-            img {
+    &__watch {
 
-                width: 370px;
+        padding: 30px;
 
-            }
+        &__list {
 
-            .inline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-                max-width: 440px;
+            &__item {
+
+                padding: 10px;
+
+                img {
+
+                    width: 90px;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                        transition: transform 0.6s ease;
+                    }
+                }
+
+
             }
         }
 
     }
-
 
 }

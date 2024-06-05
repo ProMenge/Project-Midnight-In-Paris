@@ -50,10 +50,10 @@ body {}
     @include text($fontSize);
     color: variaveis.$corTextoSecundario;
     font-weight: 700;
+    text-shadow: 1px 1px 5px #730c02
 }
 
 .text {
-
     @include text;
 
 }
